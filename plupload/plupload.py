@@ -24,7 +24,7 @@ def save(forms, files, dest):
         total = 1
 
     first = chunk == 0
-    last = chunk == total -1
+    last = chunk == total - 1
 
     try:
         destfile = os.path.join(dest, filename)

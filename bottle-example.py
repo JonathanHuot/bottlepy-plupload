@@ -11,7 +11,7 @@ def home():
 @get('/plupload/js/<filename:path>')
 def send_plupload(filename):
     from bottle import static_file
-    return static_file(filename, root='plupload/js')
+    return static_file(filename, root='js')
 
 
 @get('/upload')
@@ -24,7 +24,7 @@ def index():
 def index():
     from bottle import request
     import os
-    import plupload
+    from plupload import plupload
     return plupload.save(request.forms, request.files, os.getcwd())
 
 
